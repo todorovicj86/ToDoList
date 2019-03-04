@@ -1,45 +1,20 @@
 body{
+	margin:0;
+	padding:0;
 	background: #8e9eab;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+ul{
 	margin:0;
-	padding:0;
+	padding: 0;
 }
-#container{
-	max-width:500px;
-	width:90%;
-	height:100%;
-	margin:50px auto;
-	padding:0;
-	box-shadow: 1px 1px rgba(0,0,0,0.5);
-}
-
-#header{
-	text-transform: uppercase;
-	font-size: 30px;
-	color:white;
-	border-top-left-radius: 7px;
-	border-top-right-radius: 7px;
-	background: #0575E6;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #0575E6, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #0575E6, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
 li{
 	list-style: none;
 	padding:20px;
 	text-transform: capitalize;
 	background-color: #DDE8FB;
 	font-size: 1.3rem;
-}
-li:last-child{
-	border-bottom-left-radius: 7px;
-	border-bottom-right-radius: 7px;
-}
-
-ul{
-	margin:0;
-	padding: 0;
 }
 input{
 	-webkit-box-sizing:border-box;
@@ -53,7 +28,10 @@ input{
 	width:100%;
 	font-size: 1.6rem;
 }
-
+li:last-child{
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
 li:nth-of-type(2){
 	padding:0;
 }
@@ -67,22 +45,44 @@ li:nth-child(2n){
 	padding:22px;
 	margin-left: -20px;
 	box-shadow: 1px 1px 5px gray;
-	display:none;
 	color:white;
+	display:none;
 }
 
 .deleted{
 	text-decoration: line-through;
 	color:gray;
 }
+.newToDo:hover i{
+	display:inline;
 
-#plus{
-	float:right;
 }
 .newToDo:hover{
 	font-weight: bold;
 }
+#container{
+	max-width:500px;
+	width:90%;
+	height:100%;
+	margin:50px auto;
+	padding:0;
+	/*box-shadow: 3px 3px 5px gray;*/
 
-.newToDo:hover i{
-	display:inline;
 }
+
+#header{
+	/*background-color: #1B63BB;*/
+	text-transform: uppercase;
+	font-size: 30px;
+	color:white;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	background: #0575E6;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #0575E6, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #0575E6, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#plus{
+	float:right;
+}
+
