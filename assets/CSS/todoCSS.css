@@ -68,6 +68,7 @@ li:nth-child(2n){
 	margin-left: -20px;
 	box-shadow: 1px 1px 5px gray;
 	display:none;
+	color:white;
 }
 
 .deleted{
