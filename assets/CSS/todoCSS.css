@@ -1,5 +1,7 @@
 body{
-	background-image: linear-gradient(-90deg,  #66ff99, #00ffff, #ffff99);
+	background: #2BC0E4;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	margin:0;
 	padding:0;
 }
@@ -9,22 +11,30 @@ body{
 	height:100%;
 	margin:50px auto;
 	padding:0;
+	box-shadow: 1px 1px rgba(0,0,0,0.5);
 }
 
 #header{
-	background-color: #0099cc;
 	text-transform: uppercase;
 	font-size: 30px;
 	color:white;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	background: #0575E6;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #0575E6, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #0575E6, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 li{
 	list-style: none;
 	padding:20px;
 	text-transform: capitalize;
-	background-color: white;
+	background-color: #DDE8FB;
 	font-size: 1.3rem;
-	
+}
+li:last-child{
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
 }
 
 ul{
@@ -35,25 +45,28 @@ input{
 	-webkit-box-sizing:border-box;
 	box-sizing: border-box;
 	border:none;
-	background: none;
+	border-radius: 0;
+	background: #A7BBE4;  /* fallback for old browsers */
 	color:black;
 	padding:20px;
 	margin:0;
 	width:100%;
 	font-size: 1.6rem;
 }
+
 li:nth-of-type(2){
 	padding:0;
 }
 
 li:nth-child(2n){
-	background-color: lightgray;
+	background:#77E8D6;
 }
 
 .delete{
-	background-color: red;
+	background-color: #FF5F6D;
 	padding:22px;
 	margin-left: -20px;
+	box-shadow: 1px 1px 5px gray;
 }
 .visible{
 	display:none;
@@ -66,4 +79,8 @@ li:nth-child(2n){
 
 #plus{
 	float:right;
+}
+.newToDo:hover{
+	font-weight: bold;
+
 }
