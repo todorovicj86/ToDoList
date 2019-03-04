@@ -37,8 +37,12 @@ $(document).on("click","span", function(){
 //when press enter, add new item to the list, at the bottom
 $("input").on("keypress", function(event){
 	if(event.keyCode == 13){
+		//grabbing new todo text from input
 		var newItem = $(this).val();
-		$("ul").append('<li class="newToDo"><i class="far fa-trash-alt delete visible"></i><span> </span></li>');
+		//create variable with html for li we want to append
+		var newLI = '<li class="newToDo"><i class="far fa-trash-alt delete visible"></i><span> </span></li>';
+		$("ul").append(newLI);
+		//adding the text to last span in todo list
 		$("span:last").text(" " + newItem);
 		reset();
 	};
