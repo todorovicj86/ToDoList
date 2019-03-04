@@ -50,7 +50,6 @@ $("#plus").on("click", function(){
 //reset the input field
 function reset(){
 	$("input").val("");
-	$("input").attr("placeholder","Add new Todo");
 }
 
 //update background colors of lis
