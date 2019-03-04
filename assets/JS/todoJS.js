@@ -21,7 +21,7 @@ $(document).on("mouseleave",".newToDo", function(){
 });
 
 //when icon delete is clicked, remove the item from the list
-$(document).on("click","li i.delete", function(){
+$(document).on("click","i.delete", function(){
 	$(this).parent().remove();
 	update();
 });
