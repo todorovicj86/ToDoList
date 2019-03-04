@@ -22,7 +22,10 @@ $(document).on("mouseleave",".newToDo", function(){
 
 //when icon delete is clicked, remove the item from the list
 $(document).on("click","i.delete", function(){
-	$(this).parent().remove();
+	//removing the item with fadeOut
+	$(this).parent().fadeOut(500, function(){
+		$(this).remove();
+	});
 	update();
 });
 
