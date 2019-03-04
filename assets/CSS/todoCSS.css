@@ -67,8 +67,6 @@ li:nth-child(2n){
 	padding:22px;
 	margin-left: -20px;
 	box-shadow: 1px 1px 5px gray;
-}
-.visible{
 	display:none;
 }
 
@@ -82,6 +80,8 @@ li:nth-child(2n){
 }
 .newToDo:hover{
 	font-weight: bold;
+}
 
-
+.newToDo:hover i{
+	display:inline;
 }
