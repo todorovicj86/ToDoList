@@ -61,5 +61,5 @@ function reset(){
 
 //update background colors of lis
 function update(){
-	$("ul li:nth-child(3)").css("background","white");
+	$("ul li:nth-child(3)").css("background","#DDE8FB");
 }
