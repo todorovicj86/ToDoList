@@ -5,20 +5,6 @@
 // 	alert("not good!");
 // }
 
-//when over list, show delete icon
-$(document).on("mouseenter",".newToDo", function(){
-	$("i.delete", this).fadeIn("slow", function(){
-		$("i.delete", this).removeClass("visible");
-	});
-});
-
-//when not over item, remove delete icon
-$(document).on("mouseleave",".newToDo", function(){
-	$("i.delete", this).fadeOut("fast", function(){
-		$("i.delete", this).addClass("visible");
-	});
-
-});
 
 //when icon delete is clicked, remove the item from the list
 $(document).on("click","i.delete", function(){
