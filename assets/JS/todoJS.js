@@ -78,9 +78,13 @@ function reset(){
 
 //resets the completed and deleted to 0, when everyting is done
 function resetCompleted(){
+	//if all is completed
 	if ($("span.completed").length === 0){
+		//set the completed length to 0
 		$("span.completed").length = 0;
+		//deleted to 0
 		deleted = 0;
+		//update the text
 		$("#totalComp").text($("span.completed").length + deleted);
 	}
 }
