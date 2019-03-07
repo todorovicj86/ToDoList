@@ -30,16 +30,20 @@ $(document).on("click","i.delete", function(){
 });
 
 //when element is clicked, cross it, but leave it visible
-$(document).on("click","span", function(){
-	$(this).toggleClass("deleted");
+$(document).on("click",".todo", function(){
+	//toggle class completed
+	$(this).toggleClass("completed");
+	//toggle class active
+	$(this).toggleClass("active");
+	
 	//count completed todos
-	complete = $("span.completed").length;
+	complete = $(".todo.completed").length;
 		 
 	// counts active todos
 	active = $("li.newToDo").length - complete;
 	
 	//write number of completed and active todos
-	$("#totalComp").text($("span.completed").length + deleted);
+	$("#totalComp").text($(".todo.completed").length + deleted);
 	$("#totalActive").text(active);
 });
 
