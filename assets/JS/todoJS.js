@@ -24,9 +24,9 @@ $(document).on("click","i.delete", function(){
 	    $("#totalActive").text($("li.newToDo").length - $(".todo.completed").length);
 	    //writes total completed(removed + completed)
 	    $("#totalComp").text($(".todo.completed").length + deleted);
+	    //reset the color of the rows, when todo is deleted
+	    resetColor();
 	});
-	//resets the color of the first todo 
-	$(".newToDo:nth-child(3)").css("background","#DDE8FB");
 });
 
 //when element is clicked, cross it, but leave it visible
