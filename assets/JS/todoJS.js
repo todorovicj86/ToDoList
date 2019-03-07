@@ -25,7 +25,8 @@ $(document).on("click","i.delete", function(){
 	    //writes total completed(removed + completed)
 	    $("#totalComp").text($("span.completed").length + deleted);
 	});
-	update();
+	//resets the color of the first todo 
+	$(".newToDo:nth-child(3)").css("background","#DDE8FB");
 });
 
 //when element is clicked, cross it, but leave it visible
@@ -73,11 +74,6 @@ $("#plus").on("click", function(){
 //reset the input field
 function reset(){
 	$("input").val("");
-}
-
-//update background colors of lis
-function update(){
-	$("ul li:nth-child(3)").css("background","#DDE8FB");
 }
 
 //resets the completed and deleted to 0, when everyting is done
