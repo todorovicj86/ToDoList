@@ -58,7 +58,7 @@ $("input").on("keypress", function(event){
 		$("#totalActive").text($("li.newToDo").length - $("span.completed").length);
 		
 		 //resets input text
-		 reset();
+		 $("input").val("");
 
 		 //if all is completed, restart completed to 0
 		 resetCompleted();
@@ -70,11 +70,6 @@ $("input").on("keypress", function(event){
 $("#plus").on("click", function(){
 	$("li:nth-child(2)").slideToggle("slow");
 });
-
-//reset the input field
-function reset(){
-	$("input").val("");
-}
 
 //resets the completed and deleted to 0, when everyting is done
 function resetCompleted(){
