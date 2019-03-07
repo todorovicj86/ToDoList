@@ -21,9 +21,9 @@ $(document).on("click","i.delete", function(){
 		//count removed todos
 		deleted ++;
 		//writes active toods
-	    $("#totalActive").text($("li.newToDo").length - $("span.completed").length);
+	    $("#totalActive").text($("li.newToDo").length - $(".todo.completed").length);
 	    //writes total completed(removed + completed)
-	    $("#totalComp").text($("span.completed").length + deleted);
+	    $("#totalComp").text($(".todo.completed").length + deleted);
 	});
 	//resets the color of the first todo 
 	$(".newToDo:nth-child(3)").css("background","#DDE8FB");
@@ -56,13 +56,13 @@ $("input").on("keypress", function(event){
 		var newLI = '<li class="newToDo"><i class="far fa-trash-alt delete visible"></i><span> </span></li>';
 		$("ul").append(newLI);
 		//adding the text to last span in todo list
-		$("span:last").text(" " + newItem);
+		$("li .todo:last").text(" " + newItem);
 
 		//changes active todos when new is added
-		$("#totalActive").text($("li.newToDo").length - $("span.completed").length);
+		$("#totalActive").text($("li.newToDo").length - $(".todo.completed").length);
 		
-		 //resets input text
-		 $("input").val("");
+		  //resets input text
+		$("#addNewInput").val("");
 
 		 //if all is completed, restart completed to 0
 		 resetCompleted();
