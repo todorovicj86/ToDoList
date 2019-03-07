@@ -14,13 +14,12 @@
 		<link href="https://fonts.googleapis.com/css?family=Arvo:400,700" rel="stylesheet">
 		
 		<!-- Google fonts-icons -->
-		<<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='ha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFS' crossorigin='anonymous'>
 
 		<!-- CSS Stylesheet -->
 		<link rel="stylesheet" type="text/css" href="assets\CSS\todoCSS.css">
 
 	</head>
-
 
 	<body>
 		<div id="container">
@@ -39,34 +38,35 @@
 						<span class="filter">all</span>
 					</span>
 				</li>
-				<li id="addNew"><input id="addNewInput" type="text" name="new" placeholder="Add New Todo"></li>
-				<li class="newToDo">
-					<i class="far fa-trash-alt delete"></i>
-					<span>running</span>
+				
+				<li id="addNew">
+					<input id="addNewInput" type="text" name="new" placeholder="Add New Todo">
 				</li>
 				<li class="newToDo">
-					<i class="far fa-trash-alt delete"></i>
-					<span>shopping</span>
+					<i class="far fa-trash-alt delete" ></i>
+					<span class="todo active">running</span>
+				</li>
+				<li class="newToDo">
+					<i class="far fa-trash-alt delete" ></i>
+					<span class="todo active">shopping</span>
 					
 				</li>
 				<li class="newToDo">
-					<i class="far fa-trash-alt delete"></i>
-					 <span>writing </span>
+					<i class="far fa-trash-alt delete" ></i>
+					 <span class="todo active">writing </span>
 					 
 				</li>
 				<li class="newToDo">
-					<i class="far fa-trash-alt delete"></i>
-					<span>something</span>
+					<i class="far fa-trash-alt delete" ></i>
+					<span class="todo active">something</span>
 					
 				</li>
 				<li class="newToDo">
-					<i class="far fa-trash-alt delete"></i>
-					<span>item2</span>
+					<i class="far fa-trash-alt delete" ></i>
+					<span class="todo active">item2</span>
 
 				</li>
 			</ul>
-
-			<!-- displays number of active and completed todos -->
 			<div id="total">
 				<p>Complited: <span id="totalComp">0</span></p>
 				<p>Active: <span id="totalActive"></span></p>
