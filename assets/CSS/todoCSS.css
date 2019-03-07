@@ -14,10 +14,10 @@ li{
 	list-style: none;
 	padding:20px;
 	text-transform: capitalize;
-	background-color: #DDE8FB;
+	/*background-color: #DDE8FB;*/
 	font-size: 1.3rem;
 }
-input{
+#addNewInput{
 	-webkit-box-sizing:border-box;
 	box-sizing: border-box;
 	border:none;
@@ -37,8 +37,11 @@ li:nth-of-type(2){
 	padding:0;
 }
 
-li:nth-child(2n){
+.newToDo:nth-child(2n){
 	background:#77E8D6;
+}
+.newToDo:nth-child(2n+1){
+	background:#DDE8FB;
 }
 
 .delete{
@@ -50,16 +53,26 @@ li:nth-child(2n){
 	display:none;
 }
 
-.deleted{
+.completed{
 	text-decoration: line-through;
 	color:gray;
 }
 .newToDo:hover i{
 	display:inline;
-
+	margin-right: 10px;
 }
 .newToDo:hover{
 	font-weight: bold;
+}
+
+span.filter {
+	font-size: 1rem;
+	margin-right: 10px;
+}
+input[type="checkbox"]{
+	width:30px;
+	padding:0;
+	margin:0;
 }
 #container{
 	max-width:500px;
@@ -70,7 +83,6 @@ li:nth-child(2n){
 	/*box-shadow: 3px 3px 5px gray;*/
 
 }
-
 #header{
 	/*background-color: #1B63BB;*/
 	text-transform: uppercase;
@@ -86,4 +98,3 @@ li:nth-child(2n){
 #plus{
 	float:right;
 }
-
