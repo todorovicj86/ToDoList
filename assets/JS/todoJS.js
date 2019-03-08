@@ -72,7 +72,7 @@ $("input").on("keypress", function(event){
 		//grabbing new todo text from input
 		var newItem = $(this).val();
 		//create variable with html for li we want to append
-		var newLI = '<li class="newToDo"><i class="far fa-trash-alt delete visible"></i><span class="todo active"> </span></li>';
+		var newLI = '<li class="newToDo"><i class="far fa-trash-alt delete visible"></i><span class="todo active"> </span><span class="tooltip"> <span class="time"></span></span></li>';
 		$("ul").append(newLI);
 		//adding the text to last span in todo list
 		$("li .todo:last").text(" " + newItem);
