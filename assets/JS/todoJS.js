@@ -204,6 +204,7 @@ function resetColor(){
 		$(".newToDo").css("background","#DDE8FB");
 		//set the odd rows to be the different color
 		$(".newToDo:odd").css("background","#77E8D6");
+		resetCompleted();
 	}
 	//if in mode completed
 	if( $("input[name='complete'").is(":checked")){
@@ -211,6 +212,7 @@ function resetColor(){
 		$(".newToDo").css("background","#DDE8FB");
 		//set the odd completed rows to be the different color
 		$(".todo.completed:odd").parent().css("background","#77E8D6");
+		resetCompleted();
 	}
 	//if in mode active
 	if($("input[name='active'").is(":checked")){
@@ -218,6 +220,7 @@ function resetColor(){
 		$(".newToDo").css("background","#DDE8FB");
 		//set the odd active rows to be the different color
 		$(".todo.active:odd").parent().css("background","#77E8D6");
+		resetCompleted();
 	}
 }
 
