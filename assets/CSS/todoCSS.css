@@ -16,6 +16,7 @@ li{
 	text-transform: capitalize;
 	/*background-color: #DDE8FB;*/
 	font-size: 1.3rem;
+	position: relative;
 }
 #addNewInput{
 	-webkit-box-sizing:border-box;
@@ -56,6 +57,18 @@ li:nth-of-type(2){
 .completed{
 	text-decoration: line-through;
 	color:gray;
+}
+.time{
+	font-size:0.8rem;
+	position:absolute;
+	top:22px;
+	right:10px;
+	color:red;
+	font-weight: normal;
+}
+.tooltip{
+	/*float:right;*/
+	visibility:hidden;
 }
 .newToDo:hover i{
 	display:inline;
