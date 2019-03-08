@@ -9,6 +9,8 @@
 var deleted = 0;
 var complete;
 var active;
+//get the date when window is openned
+var dateStart = new Date();
 
 //displays all the todos
 $("#totalActive").text($("li.newToDo").length);
@@ -45,6 +47,23 @@ $(document).on("click",".todo", function(){
 	//write number of completed and active todos
 	$("#totalComp").text($(".todo.completed").length + deleted);
 	$("#totalActive").text(active);
+	//get the time when .todo is clicked
+	var time = new Date();
+	//convert the time to string
+	var dateCompleted = time.toString();
+	//take only day, month, year, hours, min, sec
+	dateCompleted= dateCompleted.split(" ").slice(1,5).join(" ");
+
+	//if todo is active
+	if($(this).hasClass("active")){
+		//write down the time when item is created
+		$(this).siblings(".tooltip").children(".time").text("Created on: " + dateCompleted);
+	}
+	//if todo is completed
+	if ($(this).hasClass("completed")){
+		//write down the time when item is created
+		$(this).siblings(".tooltip").children(".time").text("Completed on: " + dateCompleted);
+	}
 });
 
 //when press enter, add new item to the list, at the bottom
@@ -64,12 +83,32 @@ $("input").on("keypress", function(event){
 		  //resets input text
 		$("#addNewInput").val("");
 
+		//take the time when todo is added
+		var time = new Date();
+		//convert the time to string
+		var dateCreated = time.toString();
+		//take only day, month, year, hours, min, sec
+		dateCreated = dateCreated.split(" ").slice(1,5).join(" ");
+		//write down the time when item is created
+		$("li .time:last").text("Created on: " + dateCreated);
+
 		 //if all is completed, restart completed to 0
 		 resetCompleted();
 		 //resets the color when new todo is added
 		 resetColor();
 	};
 
+});
+
+//when mouse is over li
+$(document).on("mouseover","li", function(){
+	//show the tooltip/time
+	$(".tooltip", this).css("visibility","visible");
+});
+//when mouse is oute
+$(document).on("mouseout","li", function(){
+	//hide the tooltip
+	$(".tooltip", this).css("visibility","hidden");
 });
 
 //toggle input field when + is clicked
